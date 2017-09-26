@@ -68,7 +68,7 @@ public class AudioManagerEditor : EditorWindow
                 {
                     AudioClipPathDic.Remove(eachKey);
                     isRemove = true;
-                    return;
+                    return;//直接返回，下一帧来的时候会刷新字典的，否则会对字典造成影响。
                 }
                 GUILayout.EndHorizontal();
             }
